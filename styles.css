@@ -195,11 +195,16 @@ body {
 }
 
 @media screen and (max-width:750px) {
+    .main-row {
+        display: grid;
+        height: fit-content ;
+    }
     .col-1 {
         display: grid;
-        grid-template-rows:repeat(2,auto);
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
-        margin-bottom: 2rem;
+        height: fit-content;
+        /* margin-bottom: 2rem; */
     }
     .welcome-img , .theme-img {
         height: 200px;
@@ -207,8 +212,7 @@ body {
 
     .col-2 {
         display: grid;
-        grid-template-rows: repeat(2,auto
-        );
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
         margin-bottom: 2rem;
     }
@@ -219,12 +223,22 @@ body {
 
     .col-3 {
         display: grid;
-        grid-template-rows: repeat(3,auto
+        grid-template-rows: repeat(3,1fr
         );
         grid-template-columns: none;
         margin-bottom: 2rem;
     }
 
+    /* .nav-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    } */
+    .btn-subscribe {
+        margin: 1rem auto;
+        align-self: center;
+    }
     .col3-img {height: 200px;}
 
 }
